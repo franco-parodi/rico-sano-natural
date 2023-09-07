@@ -1,5 +1,6 @@
 import { Comida } from "./Comida";
 import { Duracion } from "./Duracion";
+import { Objetivo } from "./Objetivo";
 import { Paciente } from "./Paciente";
 import { Profesional } from "./Profesional";
 import { TipoComida } from "./TipoComida.enum";
@@ -12,9 +13,16 @@ export class Plan{
     private edadPaciente: number;
     private pesoPaciente: number;
     private comidas: Comida[];
+    private objetivos: Objetivo[];
 
     constructor(){
         this.comidas = [];
+        this.objetivos = [];
+    }
+    
+
+    public getObjetivos():Objetivo[]{
+        return this.objetivos;
     }
 
     public setProfesional(profesional: Profesional){

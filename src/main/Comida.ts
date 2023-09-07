@@ -4,7 +4,12 @@ import { TipoComida } from "./TipoComida.enum";
 export class Comida{
     private tipoComida: TipoComida;
     private descripcion: string;
-    private composicion: ComposicionComida;
+    private composicion: ComposicionComida[];
+
+    constructor(){
+        this.composicion = [];
+    }
+    
 
     public setTipoComida(tipo: TipoComida){
         this.tipoComida = tipo;
@@ -22,11 +27,11 @@ export class Comida{
         return this.descripcion;
     }
 
-    public setComposicion(composicion :ComposicionComida){
+   /* public setComposicion(composicion :ComposicionComida){
         this.composicion = composicion;
-    }
+    }*/
 
-    public getComposicion():ComposicionComida{
+    public getComposicion():ComposicionComida[]{
         return this.composicion;
     }
 }
